@@ -16,8 +16,11 @@ export default function ContactPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-20 md:py-32 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/contact-bg.jpg')] bg-cover bg-center opacity-10" />
+            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
+                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/hero-building.png')] bg-cover bg-top" />
+                <div className="absolute inset-0 bg-black/60" />
+                {/* Gradient fade for smooth transition */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
                 <Container className="relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
                     <p className="text-xl text-gray-300 max-w-2xl">
