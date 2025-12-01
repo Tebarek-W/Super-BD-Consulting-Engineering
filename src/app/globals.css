@@ -1,32 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  
-  /* Company Colors */
-  --primary: #0a1c3d;
-  --accent: #d4a52a;
-  --neutral: #f5f5f5;
-  --text-dark: #1a1a1a;
+  /* Dark Engineering Navy Theme with Green Accents */
+  --background: #10253F;
+  /* Dark Engineering Navy - Primary */
+  --background-dark: #0A1929;
+  /* Deeper navy for depth */
+  --foreground: #E5E7EB;
+  /* Light grey for text */
+
+  /* Primary Colors - Dark Engineering Palette */
+  --primary: #10253F;
+  /* Dark Engineering Navy */
+  --primary-light: #1A3A5C;
+  /* Lighter navy for hover states */
+  --secondary: #1E40AF;
+  /* Deep blue for contrast */
+
+  /* Light Blue Technical Accents - Modern/Clean */
+  --accent: #60A5FA;
+  /* Sky blue - Primary accent */
+  --accent-bright: #93C5FD;
+  /* Light blue - Highlights */
+  --accent-hover: #3B82F6;
+  /* Bright blue - Hover states */
+  --accent-subtle: #1E3A8A;
+  /* Deep blue for subtle backgrounds */
+
+  /* Neutral & Supporting Colors */
+  --neutral: #1F2937;
+  /* Dark grey for cards/sections */
+  --neutral-light: #374151;
+  /* Lighter grey for borders */
+  --text-dark: #E5E7EB;
+  /* Light text on dark backgrounds */
+  --text-muted: #9CA3AF;
+  /* Muted text for secondary content */
+  --border-subtle: #1F2937;
+  /* Subtle borders */
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-dark: var(--background-dark);
   --color-foreground: var(--foreground);
-  
+
   --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-subtle: var(--accent-subtle);
   --color-neutral: var(--neutral);
+  --color-neutral-light: var(--neutral-light);
   --color-text-dark: var(--text-dark);
-  
+  --color-text-muted: var(--text-muted);
+  --color-border-subtle: var(--border-subtle);
+
   --font-sans: var(--font-inter);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a1c3d; /* Dark mode background can be primary or dark gray */
-    --foreground: #f5f5f5;
+    /* Same for both - we're always dark */
+    --background: #10253F;
+    --foreground: #E5E7EB;
   }
 }
 
@@ -34,4 +73,34 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
+}
+
+/* Scrollbar Styling for Dark Theme with Green Accent */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-hover);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection Styling */
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+::-moz-selection {
+  background: var(--accent);
+  color: var(--background);
 }
