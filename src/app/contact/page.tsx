@@ -17,13 +17,13 @@ export default function ContactPage() {
 
             {/* Page Header */}
             <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/hero-building.png')] bg-cover bg-top" />
-                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/contact-hero.jpg')] bg-cover bg-center" />
+                <div className="absolute inset-0 bg-black/40" />
                 {/* Gradient fade for smooth transition */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
                 <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-                    <p className="text-xl text-gray-300 max-w-2xl">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Contact Us</h1>
+                    <p className="text-xl text-gray-100 max-w-2xl drop-shadow-md">
                         We are here to answer your questions and discuss your project needs.
                     </p>
                 </Container>
@@ -34,15 +34,15 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         {/* Contact Info */}
                         <div>
-                            <h2 className="text-3xl font-bold mb-8 text-primary">Get in Touch</h2>
+                            <h2 className="text-3xl font-bold mb-8 text-white">Get in Touch</h2>
                             <div className="space-y-8">
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0">
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1">Visit Our Lab</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="font-bold text-lg mb-1 text-white">Visit Our Lab</h3>
+                                        <p className="text-gray-300">
                                             Hawassa, Ethiopia<br />
                                             (Near Hawassa University Main Campus)
                                         </p>
@@ -54,8 +54,8 @@ export default function ContactPage() {
                                         <Phone size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="font-bold text-lg mb-1 text-white">Call Us</h3>
+                                        <p className="text-gray-300">
                                             +251-913-609-241<br />
                                             +251-922-778-952<br />
                                             +251-914-043-105
@@ -68,8 +68,8 @@ export default function ContactPage() {
                                         <Mail size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1">Email Us</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="font-bold text-lg mb-1 text-white">Email Us</h3>
+                                        <p className="text-gray-300">
                                             danielhailemariam4@gmail.com<br />
                                             Dani200477@yahoo.com<br />
                                             Dani200477@hu.edu.et
@@ -82,8 +82,8 @@ export default function ContactPage() {
                                         <Clock size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1">Working Hours</h3>
-                                        <p className="text-gray-600">
+                                        <h3 className="font-bold text-lg mb-1 text-white">Working Hours</h3>
+                                        <p className="text-gray-300">
                                             Monday - Friday: 8:00 AM - 5:30 PM<br />
                                             Saturday: 8:00 AM - 12:30 PM
                                         </p>
@@ -102,13 +102,14 @@ export default function ContactPage() {
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     title="Google Map"
+                                    suppressHydrationWarning
                                 ></iframe>
                             </div>
                         </div>
 
                         {/* Contact Form */}
-                        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                            <h2 className="text-2xl font-bold mb-6 text-primary">Send us a Message</h2>
+                        <div className="p-8">
+                            <h2 className="text-2xl font-bold mb-6 text-white">Send us a Message</h2>
                             <ContactForm />
                         </div>
                     </div>

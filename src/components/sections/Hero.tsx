@@ -47,8 +47,8 @@ export default function Hero() {
             </div>
 
             {/* Dark Gradient Overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background/70 to-background/95" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/40 via-background/30 to-background/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />
 
             <Container className="relative z-10 text-center px-4">
                 <motion.div

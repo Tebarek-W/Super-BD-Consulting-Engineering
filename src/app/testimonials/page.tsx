@@ -44,7 +44,7 @@ export default function TestimonialsPage() {
 
             {/* Page Header */}
             <section className="bg-primary text-white py-20 md:py-32 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/images/testimonials-bg.jpg')] bg-cover bg-center opacity-10" />
+                <div className="absolute inset-0 bg-[url('/images/testimonials-bg.jpg')] bg-cover bg-center opacity-20" />
                 <Container className="relative z-10">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h1>
                     <p className="text-xl text-gray-300 max-w-2xl">

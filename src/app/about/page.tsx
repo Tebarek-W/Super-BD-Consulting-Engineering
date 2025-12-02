@@ -20,7 +20,7 @@ export default function AboutPage() {
                 <div
                     className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/hero-building.png')] bg-cover bg-center"
                 />
-                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-black/30" />
                 {/* Gradient fade for smooth transition */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
                 <Container className="relative z-10">

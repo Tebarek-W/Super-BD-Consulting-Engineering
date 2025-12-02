@@ -8,31 +8,37 @@ const services = [
         title: "Soil Investigation",
         description: "Comprehensive soil analysis for foundation design and stability assessments.",
         icon: Layers,
+        image: "/images/soil-investigation.jpg"
     },
     {
         title: "Concrete Testing",
         description: "Quality control testing for concrete mixes, strength, and durability.",
         icon: Beaker,
+        image: "/images/lab-photo.jpg"
     },
     {
         title: "Geotechnical Investigation",
         description: "In-depth subsurface exploration for bridges, dams, and buildings.",
         icon: Activity,
+        image: "/images/hero-dam.png"
     },
     {
         title: "Material Testing",
         description: "Testing of aggregates, asphalt, and other construction materials.",
         icon: Truck,
+        image: "/images/services-photo.jpg"
     },
     {
         title: "Consultancy",
         description: "Expert engineering advice and technical reporting for complex projects.",
         icon: HardHat,
+        image: "/images/hero-building.png"
     },
     {
         title: "Reporting",
         description: "Detailed data interpretation and certification for regulatory compliance.",
         icon: FileText,
+        image: "/images/hero-bridge.png"
     },
 ];
 
@@ -75,22 +81,29 @@ export default function ServicesSummary() {
                     {services.map((service, index) => (
                         <Card
                             key={index}
-                            className="relative overflow-hidden bg-gradient-to-br from-neutral to-background-dark border border-neutral-light/20 shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group hover:-translate-y-2"
+                            className="relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group hover:-translate-y-2"
                         >
-                            {/* Animated gradient overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-accent-bright/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            {/* Background Image */}
+                            <div className="absolute inset-0 z-0">
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/50 z-10" />
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                            </div>
 
                             {/* Accent line */}
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-bright transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-bright transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20" />
 
-                            <CardHeader className="relative">
-                                <div className="w-14 h-14 bg-gradient-to-br from-accent/20 to-accent-bright/20 rounded-xl flex items-center justify-center mb-4 text-accent group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                            <CardHeader className="relative z-10">
+                                <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 text-accent border border-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                                     <service.icon size={28} className="group-hover:text-accent-bright transition-colors" />
                                 </div>
                                 <CardTitle className="text-xl mb-2 text-white group-hover:text-accent transition-colors">{service.title}</CardTitle>
                             </CardHeader>
-                            <CardContent className="relative">
-                                <CardDescription className="text-base text-text-muted leading-relaxed">
+                            <CardContent className="relative z-10">
+                                <CardDescription className="text-base text-gray-200 leading-relaxed">
                                     {service.description}
                                 </CardDescription>
                             </CardContent>

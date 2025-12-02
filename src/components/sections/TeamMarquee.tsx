@@ -58,18 +58,31 @@ export default function TeamMarquee() {
                                 key={index}
                                 className="relative w-[350px] flex-shrink-0 group"
                             >
-                                <div className="h-full bg-neutral/50 backdrop-blur-sm border border-neutral-light/20 rounded-2xl p-8 hover:bg-neutral hover:border-accent/50 transition-all duration-300 flex flex-col">
-                                    {/* Header */}
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent/20 to-blue-600/20 flex items-center justify-center text-accent border border-accent/20 group-hover:scale-110 transition-transform duration-300">
-                                            <Users size={32} />
+                                <div className="h-full bg-neutral/50 backdrop-blur-sm border border-neutral-light/20 rounded-2xl p-8 hover:bg-neutral hover:border-accent/50 transition-all duration-300 flex flex-col items-center text-center">
+                                    {/* Profile Photo */}
+                                    <div className="mb-6 relative">
+                                        <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent/20 to-blue-600/20 flex items-center justify-center text-accent border-2 border-accent/30 group-hover:border-accent group-hover:scale-105 transition-all duration-300 overflow-hidden shadow-lg shadow-black/20 group-hover:shadow-accent/20">
+                                            {member.image ? (
+                                                <img
+                                                    src={member.image}
+                                                    alt={member.name}
+                                                    className="w-full h-full object-cover brightness-110"
+                                                    style={{ objectPosition: (member as any).imagePosition || "center" }}
+                                                />
+                                            ) : (
+                                                <Users size={48} />
+                                            )}
                                         </div>
-                                        <div>
-                                            <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors">
-                                                {member.name}
-                                            </h3>
-                                            <p className="text-accent-bright text-sm font-medium">{member.title}</p>
-                                        </div>
+                                        {/* Decorative ring */}
+                                        <div className="absolute inset-0 rounded-full border border-white/10 scale-110 group-hover:scale-125 transition-transform duration-500" />
+                                    </div>
+
+                                    {/* Name & Title */}
+                                    <div className="mb-4">
+                                        <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors mb-1">
+                                            {member.name}
+                                        </h3>
+                                        <p className="text-accent-bright text-sm font-medium">{member.title}</p>
                                     </div>
 
                                     {/* Bio */}
@@ -78,31 +91,30 @@ export default function TeamMarquee() {
                                     </p>
 
                                     {/* Footer / Contact */}
-                                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-center gap-4 w-full">
                                         {member.email && (
                                             <a
                                                 href={`mailto:${member.email}`}
                                                 className="flex items-center gap-2 text-xs text-text-muted hover:text-accent transition-colors"
                                             >
                                                 <Mail size={14} />
-                                                Email Profile
+                                                Email
                                             </a>
                                         )}
-                                        <div className="flex gap-2 text-text-muted">
-                                            {member.degree && (
-                                                <span className="text-xs bg-white/5 px-2 py-1 rounded">{member.degree}</span>
-                                            )}
-                                        </div>
+                                        {member.degree && (
+                                            <span className="text-xs bg-white/5 px-2 py-1 rounded text-text-muted">{member.degree}</span>
+                                        )}
                                     </div>
 
                                     {/* Hover Gradient Line */}
                                     <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl" />
                                 </div>
                             </div>
-                        ))}
-                    </motion.div>
-                </div>
-            </div>
-        </div>
+                        ))
+                        }
+                    </motion.div >
+                </div >
+            </div >
+        </div >
     );
 }

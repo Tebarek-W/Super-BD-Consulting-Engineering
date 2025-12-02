@@ -3,7 +3,7 @@ export const teamMembers = [
         name: "Daniel Hailemariam",
         title: "General Manager & Pavement/Materials Engineer",
         degree: "M.Sc.",
-        bio: "With over 13 years of experience in the construction and engineering sector, Daniel leads Super-BD with a focus on technical precision and quality assurance. His expertise spans pavement design, road safety engineering, and complex geotechnical investigations.",
+        bio: "With over 15 years of experience in civil engineering, Daniel leads Super-BD with a focus on quality assurance and technical excellence. He specializes in pavement design and advanced material testing.",
         education: [
             "M.Sc. in Road & Transport Engineering",
             "B.Sc. in Civil Engineering"
@@ -22,7 +22,9 @@ export const teamMembers = [
             "DCP 3.1"
         ],
         email: "danielhailemariam4@gmail.com",
-        role: "ceo"
+        role: "ceo",
+        image: "/images/daniel-hailemariam.jpg",
+        imagePosition: "center 15%"
     },
     {
         name: "Dr. Abebe Worku",
