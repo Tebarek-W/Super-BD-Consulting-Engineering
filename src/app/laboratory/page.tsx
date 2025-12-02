@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Microscope, Zap, Scale, Hammer } from "lucide-react";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
     title: "Laboratory & Equipment | Super-BD Consulting Engineering",
@@ -62,18 +63,12 @@ export default function LaboratoryPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/lab-photo.jpg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-black/20" />
-                {/* Gradient fade for smooth transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background-dark" />
-                <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Laboratory & Equipment</h1>
-                    <p className="text-xl text-text-muted max-w-2xl">
-                        Precision instruments for accurate results. Our lab is equipped to handle comprehensive testing requirements.
-                    </p>
-                </Container>
-            </section>
+            <PageHero
+                title="Laboratory & Equipment"
+                description="Precision instruments for accurate results. Our lab is equipped to handle comprehensive testing requirements."
+                image="/images/lab-photo.jpg"
+                customHeight="h-[85vh] min-h-[700px]"
+            />
 
             <Section className="bg-background-dark">
                 <Container>

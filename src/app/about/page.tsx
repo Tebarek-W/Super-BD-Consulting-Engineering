@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Target, Eye, Heart, CheckCircle2 } from "lucide-react";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
     title: "About Us | Super-BD Consulting Engineering",
@@ -16,20 +17,11 @@ export default function AboutPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div
-                    className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/hero-building.png')] bg-cover bg-center"
-                />
-                <div className="absolute inset-0 bg-black/30" />
-                {/* Gradient fade for smooth transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
-                <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-                    <p className="text-xl text-text-muted max-w-2xl">
-                        Building the future on a foundation of precision, quality, and engineering excellence.
-                    </p>
-                </Container>
-            </section>
+            <PageHero
+                title="About Us"
+                description="Building the future on a foundation of precision, quality, and engineering excellence."
+                image="/images/hero-building.png"
+            />
 
             {/* Company Background */}
             <Section>
@@ -128,18 +120,26 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold mb-12 text-center text-white">Laboratory Capabilities</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { title: "Soil Mechanics", desc: "Triaxial tests, consolidation, shear strength." },
-                            { title: "Concrete Technology", desc: "Compressive strength, mix design, durability." },
-                            { title: "Asphalt & Bitumen", desc: "Marshall stability, extraction, penetration." },
-                            { title: "Aggregate Testing", desc: "Gradation, abrasion, impact value, specific gravity." },
-                            { title: "Field Testing", desc: "Plate load tests, DCP, core drilling." },
-                            { title: "Chemical Analysis", desc: "Soil and water chemical properties." },
-                            { title: "Rock Mechanics", desc: "Point load, unconfined compression." },
-                            { title: "Geophysical Survey", desc: "Electrical resistivity, seismic refraction." }
+                            { title: "Soil Mechanics", desc: "Triaxial tests, consolidation, shear strength.", image: "/images/soil-mechanics-bg.jpg" },
+                            { title: "Concrete Technology", desc: "Compressive strength, mix design, durability.", image: "/images/concrete-technology-bg.jpg" },
+                            { title: "Asphalt & Bitumen", desc: "Marshall stability, extraction, penetration.", image: "/images/asphalt-bitumen-bg.jpg" },
+                            { title: "Aggregate Testing", desc: "Gradation, abrasion, impact value, specific gravity.", image: "/images/aggregate-testing-bg.jpg" },
+                            { title: "Field Testing", desc: "Plate load tests, DCP, core drilling.", image: "/images/field-testing-bg.jpg" },
+                            { title: "Chemical Analysis", desc: "Soil and water chemical properties.", image: "/images/chemical-analysis-bg.jpg" },
+                            { title: "Rock Mechanics", desc: "Point load, unconfined compression.", image: "/images/rock-mechanics-bg.jpg" },
+                            { title: "Geophysical Survey", desc: "Electrical resistivity, seismic refraction.", image: "/images/geophysical-survey-bg.jpg" }
                         ].map((item, index) => (
-                            <div key={index} className="p-6 bg-neutral border border-neutral-light/20 rounded-lg hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all group">
-                                <h3 className="font-bold text-lg mb-2 text-white group-hover:text-accent transition-colors">{item.title}</h3>
-                                <p className="text-sm text-text-muted">{item.desc}</p>
+                            <div key={index} className="relative p-6 bg-neutral border border-neutral-light/20 rounded-lg hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all group overflow-hidden">
+                                {(item as any).image && (
+                                    <>
+                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: `url('${(item as any).image}')` }} />
+                                        <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-colors" />
+                                    </>
+                                )}
+                                <div className="relative z-10">
+                                    <h3 className="font-bold text-lg mb-2 text-white group-hover:text-accent transition-colors">{item.title}</h3>
+                                    <p className={`text-sm ${(item as any).image ? 'text-gray-200' : 'text-text-muted'}`}>{item.desc}</p>
+                                </div>
                             </div>
                         ))}
                     </div>

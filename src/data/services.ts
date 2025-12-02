@@ -25,7 +25,7 @@ export const services = [
         icon: Beaker,
         shortDescription: "Quality control testing for concrete mixes, strength, and durability.",
         fullDescription: "We offer a full range of concrete testing services to ensure structural integrity and compliance with design specifications. From fresh concrete testing to hardened concrete analysis, we cover it all.",
-        image: "/images/lab-photo.jpg",
+        image: "/images/concrete-testing.jpg",
         features: [
             "Compressive Strength Test",
             "Flexural Strength Test",
@@ -42,7 +42,7 @@ export const services = [
         icon: Truck,
         shortDescription: "Testing of aggregates, asphalt, and road construction materials.",
         fullDescription: "Our asphalt and aggregate testing services are essential for road construction projects. We ensure materials meet the rigorous standards required for durable pavements.",
-        image: "/images/services-photo.jpg",
+        image: "/images/asphalt-aggregate.jpg",
         features: [
             "Marshall Stability & Flow",
             "Bitumen Content Extraction",
@@ -59,7 +59,7 @@ export const services = [
         icon: Activity,
         shortDescription: "In-depth subsurface exploration for bridges, dams, and buildings.",
         fullDescription: "We conduct detailed geotechnical investigations for major infrastructure projects. Our reports provide comprehensive recommendations for foundation types, bearing capacity, and settlement analysis.",
-        image: "/images/hero-dam.png",
+        image: "/images/geotechnical-investigation.jpg",
         features: [
             "Deep Drilling & Sampling",
             "Rock Coring & Quality Designation (RQD)",

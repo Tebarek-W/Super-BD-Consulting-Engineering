@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { services } from "@/data/services";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
     title: "Our Services | Super-BD Consulting Engineering",
@@ -19,24 +20,18 @@ export default function ServicesPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/services-photo.jpg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-black/30" />
-                {/* Gradient fade for smooth transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
-                <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-                    <p className="text-xl text-gray-300 max-w-2xl">
-                        Comprehensive engineering solutions tailored to your project needs.
-                    </p>
-                </Container>
-            </section>
+            <PageHero
+                title="Our Services"
+                description="Comprehensive engineering solutions tailored to your project needs."
+                image="/images/services-photo.jpg"
+                customHeight="h-[85vh] min-h-[700px]"
+            />
 
             <Section>
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.map((service) => (
-                            <Card key={service.id} className="group relative flex flex-col overflow-hidden border-0 shadow-lg h-[480px]">
+                            <Card key={service.id} id={service.id} className="group relative flex flex-col overflow-hidden border-0 shadow-lg h-[480px] scroll-mt-24">
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/50 z-10" />

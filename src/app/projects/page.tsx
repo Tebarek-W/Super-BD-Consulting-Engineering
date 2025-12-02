@@ -3,6 +3,7 @@ import { Section } from "@/components/ui/Section";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ProjectTable from "@/components/ui/ProjectTable";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
     title: "Our Projects | Super-BD Consulting Engineering",
@@ -35,18 +36,11 @@ export default function ProjectsPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/hero-bridge.png')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-black/40" />
-                {/* Gradient fade for smooth transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
-                <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
-                    <p className="text-xl text-gray-300 max-w-2xl">
-                        Delivering excellence across diverse sectors, from transport infrastructure to major building works.
-                    </p>
-                </Container>
-            </section>
+            <PageHero
+                title="Our Projects"
+                description="Delivering excellence across diverse sectors, from transport infrastructure to major building works."
+                image="/images/hero-bridge.png"
+            />
 
             <Section>
                 <Container>

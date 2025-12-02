@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/ui/ContactForm";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
     title: "Contact Us | Super-BD Consulting Engineering",
@@ -16,18 +17,11 @@ export default function ContactPage() {
             <Navbar />
 
             {/* Page Header */}
-            <section className="bg-primary text-white py-32 md:py-48 relative overflow-hidden">
-                <div className="absolute inset-x-0 bottom-0 top-28 bg-[url('/images/contact-hero.jpg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-black/40" />
-                {/* Gradient fade for smooth transition */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
-                <Container className="relative z-10">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Contact Us</h1>
-                    <p className="text-xl text-gray-100 max-w-2xl drop-shadow-md">
-                        We are here to answer your questions and discuss your project needs.
-                    </p>
-                </Container>
-            </section>
+            <PageHero
+                title="Contact Us"
+                description="We are here to answer your questions and discuss your project needs."
+                image="/images/contact-hero.jpg"
+            />
 
             <Section>
                 <Container>

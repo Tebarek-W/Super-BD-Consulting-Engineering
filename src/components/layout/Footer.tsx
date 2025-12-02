@@ -63,15 +63,21 @@ export default function Footer() {
                         <h3 className="text-lg font-bold mb-6 text-white border-b border-accent/30 pb-2 inline-block">Our Services</h3>
                         <ul className="space-y-3">
                             {[
-                                "Soil Investigation",
-                                "Concrete Testing",
-                                "Asphalt Testing",
-                                "Geotechnical Investigation",
-                                "Environmental Testing",
-                                "Consultancy & Reporting",
+                                { name: "Soil Investigation", id: "soil-investigation" },
+                                { name: "Concrete Testing", id: "concrete-testing" },
+                                { name: "Asphalt Testing", id: "asphalt-testing" },
+                                { name: "Geotechnical Investigation", id: "geotechnical-investigation" },
+                                { name: "Environmental Testing", id: "environmental-testing" },
+                                { name: "Consultancy & Reporting", id: "consultancy" },
                             ].map((service) => (
-                                <li key={service} className="text-text-muted text-sm hover:text-accent transition-colors cursor-default">
-                                    • {service}
+                                <li key={service.id}>
+                                    <Link
+                                        href={`/services#${service.id}`}
+                                        className="text-text-muted hover:text-accent transition-colors text-sm flex items-center gap-2 group"
+                                    >
+                                        <span className="w-1.5 h-1.5 bg-accent rounded-full group-hover:scale-150 transition-transform" />
+                                        {service.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

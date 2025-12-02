@@ -37,18 +37,13 @@ export default function Navbar() {
                     : "bg-transparent py-5"
             )}
         >
-            <div className="container mx-auto px-4 md:px-6">
+            <div className="container mx-auto px-2 md:px-4">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <div className={cn(
-                            "w-14 h-14 rounded-full flex items-center justify-center p-2.5 transition-all duration-300",
-                            scrolled
-                                ? "bg-gradient-to-br from-accent-hover to-accent shadow-lg shadow-accent/30"
-                                : "bg-gradient-to-br from-accent to-accent-bright shadow-xl shadow-accent/40"
-                        )}>
+                    <Link href="/" className="flex items-center gap-2 group">
+                        <div className="w-16 h-16 flex items-center justify-center transition-all duration-300">
                             <img
-                                src="/logo.png"
+                                src="/company-logo.png"
                                 alt="Super BD Logo"
                                 className="w-full h-full object-contain"
                             />
