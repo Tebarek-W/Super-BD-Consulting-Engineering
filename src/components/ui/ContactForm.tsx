@@ -11,7 +11,7 @@ export default function ContactForm() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        subject: "general",
+        subject: "",
         message: ""
     });
 
@@ -25,12 +25,12 @@ export default function ContactForm() {
         // Simulate form submission
         setTimeout(() => {
             setStatus("success");
-            setFormData({ name: "", email: "", subject: "general", message: "" });
+            setFormData({ name: "", email: "", subject: "", message: "" });
             setTimeout(() => setStatus("idle"), 3000);
         }, 1500);
     };
 
-    const inputClasses = "w-full px-4 py-3 bg-neutral-light/20 border-2 rounded-xl outline-none transition-all duration-300 text-white placeholder-transparent";
+    const inputClasses = "w-full px-4 py-3 bg-neutral-light/20 border-2 rounded-xl outline-none transition-all duration-300 text-foreground placeholder-transparent";
     const getBorderClass = (id: string) =>
         focusedField === id ? "border-accent bg-neutral-light/30 shadow-lg shadow-accent/10" : "border-neutral-light/30 hover:border-neutral-light/50";
 
@@ -86,29 +86,21 @@ export default function ContactForm() {
             <div className="relative">
                 <label
                     htmlFor="subject"
-                    className="absolute -top-3 left-4 bg-background px-1 text-xs font-medium text-accent"
+                    className={labelClasses}
+                    style={getLabelStyle("subject", formData.subject)}
                 >
-                    Subject
+                    How can we help you?
                 </label>
-                <select
+                <input
+                    type="text"
                     id="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     onFocus={() => setFocusedField("subject")}
                     onBlur={() => setFocusedField(null)}
-                    className={`${inputClasses} ${getBorderClass("subject")} appearance-none cursor-pointer`}
-                >
-                    <option value="general" className="text-gray-900">General Inquiry</option>
-                    <option value="quote" className="text-gray-900">Request a Quote</option>
-                    <option value="soil" className="text-gray-900">Soil Investigation</option>
-                    <option value="concrete" className="text-gray-900">Concrete Testing</option>
-                    <option value="other" className="text-gray-900">Other</option>
-                </select>
-                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
+                    required
+                    className={`${inputClasses} ${getBorderClass("subject")}`}
+                />
             </div>
 
             <div className="relative">

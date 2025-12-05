@@ -8,9 +8,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Super-BD Consulting Engineering",
+  title: {
+    default: "Super-BD Consulting Engineering",
+    template: "%s | Super-BD Consulting",
+  },
   description: "Geotechnical Engineering & Materials Testing Laboratory in Hawassa, Ethiopia.",
+  keywords: ["Civil Engineering Ethiopia", "Geotechnical Investigation", "Structural Design", "Construction Supervision", "Material Testing Laboratory", "Project Management", "Super-BD Consulting"],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.superbd-consulting.com",
+    siteName: "Super-BD Consulting Engineering",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@SuperBD",
+  },
 };
+
+import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
   children,
@@ -18,11 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

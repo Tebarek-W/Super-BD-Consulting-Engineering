@@ -31,7 +31,7 @@ export default function TeamOrbit() {
                                 <Users size={32} />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                                <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
                                 <p className="text-accent text-sm">{member.title}</p>
                             </div>
                         </div>
@@ -61,7 +61,7 @@ export default function TeamOrbit() {
                                 <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-accent to-blue-600 flex items-center justify-center text-white shadow-lg">
                                     <Users size={40} />
                                 </div>
-                                <h3 className="text-lg font-bold text-white leading-tight">{member.name}</h3>
+                                <h3 className="text-lg font-bold text-foreground leading-tight">{member.name}</h3>
                                 <p className="text-accent text-xs mt-1 font-medium">{member.title}</p>
 
                                 {/* Hover Details */}
@@ -117,7 +117,7 @@ export default function TeamOrbit() {
                                                 <Users size={20} />
                                             </div>
                                             <div>
-                                                <h4 className="text-white font-bold text-sm">{member.name}</h4>
+                                                <h4 className="text-foreground font-bold text-sm">{member.name}</h4>
                                                 <p className="text-text-muted text-xs">{member.title}</p>
                                             </div>
                                         </div>

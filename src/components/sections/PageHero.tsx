@@ -10,9 +10,10 @@ interface PageHeroProps {
     imagePosition?: string;
     topOffset?: boolean;
     customHeight?: string;
+    overlayClassName?: string;
 }
 
-export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight }: PageHeroProps) {
+export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight, overlayClassName }: PageHeroProps) {
     const heightClass = customHeight || "h-[70vh] min-h-[600px]";
 
     return (
@@ -27,7 +28,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
             />
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50" />
+            <div className={`absolute inset-0 ${overlayClassName || "bg-white/90 dark:bg-black/60"}`} />
 
             {/* Gradient Fade */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
@@ -43,7 +44,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg"
+                        className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground dark:text-white drop-shadow-lg"
                     >
                         {title}
                     </motion.h1>
@@ -51,7 +52,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
-                        className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+                        className="text-xl md:text-2xl text-text-muted dark:text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
                     >
                         {description}
                     </motion.p>

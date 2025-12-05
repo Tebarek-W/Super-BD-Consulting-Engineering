@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -19,6 +21,7 @@ const navLinks = [
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -34,7 +37,12 @@ export default function Navbar() {
                 "fixed w-full z-50 transition-all duration-300",
                 scrolled
                     ? "bg-background/95 backdrop-blur-lg shadow-lg shadow-background-dark/50 py-3 border-b border-neutral-light/20"
-                    : "bg-transparent py-5"
+                    : cn(
+                        "py-5",
+                        pathname === "/"
+                            ? "bg-transparent"
+                            : "bg-background/95 backdrop-blur-lg shadow-lg shadow-background-dark/50 border-b border-neutral-light/20 dark:bg-transparent dark:shadow-none dark:border-none"
+                    )
             )}
         >
             <div className="container mx-auto px-2 md:px-4">
@@ -49,7 +57,7 @@ export default function Navbar() {
                             />
                         </div>
                         <div className="flex flex-col">
-                            <span className="font-bold text-lg leading-none text-white group-hover:text-accent transition-colors">
+                            <span className="font-bold text-lg leading-none text-foreground group-hover:text-accent transition-colors">
                                 Super-BD
                             </span>
                             <span className="text-xs font-medium text-text-muted">
@@ -60,31 +68,38 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-sm font-medium text-text-dark hover:text-accent transition-colors relative group"
-                            >
-                                {link.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
-                            </Link>
-                        ))}
-                        <Link
-                            href="/contact"
-                            className="px-6 py-2.5 bg-gradient-to-r from-accent-hover to-accent text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-accent/40 transition-all duration-300 text-sm"
-                        >
-                            Get a Quote
-                        </Link>
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={cn(
+                                        "text-sm font-medium transition-colors relative group",
+                                        isActive ? "text-accent" : "text-text-dark hover:text-accent"
+                                    )}
+                                >
+                                    {link.name}
+                                    <span className={cn(
+                                        "absolute bottom-0 left-0 h-0.5 bg-accent transition-all duration-300",
+                                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                                    )} />
+                                </Link>
+                            );
+                        })}
+                        <ThemeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden text-accent hover:text-accent-bright transition-colors"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? <X size={28} /> : <Menu size={28} />}
-                    </button>
+                    <div className="md:hidden flex items-center gap-4">
+                        <ThemeToggle />
+                        <button
+                            className="text-accent hover:text-accent-bright transition-colors"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -98,16 +113,22 @@ export default function Navbar() {
                         className="absolute top-full left-0 w-full bg-background-dark/98 backdrop-blur-lg shadow-2xl md:hidden border-t border-neutral-light/20"
                     >
                         <div className="flex flex-col py-6 px-6 gap-4">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-text-dark font-medium hover:text-accent transition-colors py-2 border-b border-neutral-light/10"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.name}
+                                        href={link.href}
+                                        className={cn(
+                                            "font-medium transition-colors py-2 border-b border-neutral-light/10",
+                                            isActive ? "text-accent" : "text-text-dark hover:text-accent"
+                                        )}
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                );
+                            })}
                             <div className="h-px bg-neutral-light/20 my-2" />
                             <div className="flex flex-col gap-3 text-sm text-text-muted">
                                 <div className="flex items-center gap-3">
@@ -119,13 +140,7 @@ export default function Navbar() {
                                     <span>danielhailemariam4@gmail.com</span>
                                 </div>
                             </div>
-                            <Link
-                                href="/contact"
-                                className="mt-4 px-6 py-3 bg-gradient-to-r from-accent-hover to-accent text-white font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-accent/40 transition-all"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Get a Quote
-                            </Link>
+
                         </div>
                     </motion.div>
                 )}

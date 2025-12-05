@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Users, Mail, BookOpen, Award, Briefcase } from "lucide-react";
+import { Users, Mail, BookOpen, Award, Briefcase, Phone, MapPin } from "lucide-react";
 import { teamMembers } from "@/data/team";
 
 // Sort members: CEO -> Manager -> Others
@@ -21,7 +21,7 @@ export default function TeamMarquee() {
 
             <div className="relative z-10 flex flex-col gap-8">
                 <div className="text-center mb-8 px-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Meet Our Experts</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Experts</h2>
                     <p className="text-text-muted max-w-2xl mx-auto">
                         A dedicated team of professionals committed to engineering excellence.
                     </p>
@@ -79,7 +79,7 @@ export default function TeamMarquee() {
 
                                     {/* Name & Title */}
                                     <div className="mb-4">
-                                        <h3 className="text-xl font-bold text-white group-hover:text-accent transition-colors mb-1">
+                                        <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors mb-1">
                                             {member.name}
                                         </h3>
                                         <p className="text-accent-bright text-sm font-medium">{member.title}</p>
@@ -91,18 +91,30 @@ export default function TeamMarquee() {
                                     </p>
 
                                     {/* Footer / Contact */}
-                                    <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-center gap-4 w-full">
+                                    <div className="mt-auto pt-6 border-t border-white/5 flex flex-col gap-2 w-full">
                                         {member.email && (
                                             <a
                                                 href={`mailto:${member.email}`}
-                                                className="flex items-center gap-2 text-xs text-text-muted hover:text-accent transition-colors"
+                                                className="flex items-center gap-2 text-xs text-text-muted hover:text-accent transition-colors justify-center"
                                             >
                                                 <Mail size={14} />
                                                 Email
                                             </a>
                                         )}
-                                        {member.degree && (
-                                            <span className="text-xs bg-white/5 px-2 py-1 rounded text-text-muted">{member.degree}</span>
+                                        {(member as any).phone && (
+                                            <a
+                                                href={`tel:${(member as any).phone}`}
+                                                className="flex items-center gap-2 text-xs text-text-muted hover:text-accent transition-colors justify-center"
+                                            >
+                                                <Phone size={14} />
+                                                {(member as any).phone}
+                                            </a>
+                                        )}
+                                        {(member as any).city && (
+                                            <span className="flex items-center gap-2 text-xs text-text-muted justify-center">
+                                                <MapPin size={14} />
+                                                {(member as any).city}
+                                            </span>
                                         )}
                                     </div>
 

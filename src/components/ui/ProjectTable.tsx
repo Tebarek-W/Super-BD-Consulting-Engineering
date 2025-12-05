@@ -17,7 +17,7 @@ interface ProjectTableProps {
 export default function ProjectTable({ title, projects }: ProjectTableProps) {
     return (
         <div className="mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-white border-l-4 border-accent pl-4">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-foreground border-l-4 border-accent pl-4">
                 {title}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -31,7 +31,7 @@ export default function ProjectTable({ title, projects }: ProjectTableProps) {
                         className="group bg-neutral border border-neutral-light/20 rounded-lg p-6 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
                     >
                         {/* Project Name */}
-                        <h4 className="text-lg font-bold text-white mb-3 group-hover:text-accent transition-colors line-clamp-2">
+                        <h4 className="text-lg font-bold text-foreground mb-3 group-hover:text-accent transition-colors line-clamp-2">
                             {project.name}
                         </h4>
 

@@ -20,7 +20,8 @@ export default function ContactPage() {
             <PageHero
                 title="Contact Us"
                 description="We are here to answer your questions and discuss your project needs."
-                image="/images/contact-hero.jpg"
+                image="/images/contact-hero-modern.jpg"
+                overlayClassName="bg-white/80 dark:bg-black/40"
             />
 
             <Section>
@@ -28,15 +29,15 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                         {/* Contact Info */}
                         <div>
-                            <h2 className="text-3xl font-bold mb-8 text-white">Get in Touch</h2>
+                            <h2 className="text-3xl font-bold mb-8 text-foreground">Get in Touch</h2>
                             <div className="space-y-8">
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center text-accent shrink-0">
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1 text-white">Visit Our Lab</h3>
-                                        <p className="text-gray-300">
+                                        <h3 className="font-bold text-lg mb-1 text-foreground">Visit Our Lab</h3>
+                                        <p className="text-text-muted">
                                             Hawassa, Ethiopia<br />
                                             (Near Hawassa University Main Campus)
                                         </p>
@@ -48,8 +49,8 @@ export default function ContactPage() {
                                         <Phone size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1 text-white">Call Us</h3>
-                                        <p className="text-gray-300">
+                                        <h3 className="font-bold text-lg mb-1 text-foreground">Call Us</h3>
+                                        <p className="text-text-muted">
                                             +251-913-609-241<br />
                                             +251-922-778-952<br />
                                             +251-914-043-105
@@ -62,8 +63,8 @@ export default function ContactPage() {
                                         <Mail size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1 text-white">Email Us</h3>
-                                        <p className="text-gray-300">
+                                        <h3 className="font-bold text-lg mb-1 text-foreground">Email Us</h3>
+                                        <p className="text-text-muted">
                                             danielhailemariam4@gmail.com<br />
                                             Dani200477@yahoo.com<br />
                                             Dani200477@hu.edu.et
@@ -76,8 +77,8 @@ export default function ContactPage() {
                                         <Clock size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-lg mb-1 text-white">Working Hours</h3>
-                                        <p className="text-gray-300">
+                                        <h3 className="font-bold text-lg mb-1 text-foreground">Working Hours</h3>
+                                        <p className="text-text-muted">
                                             Monday - Friday: 8:00 AM - 5:30 PM<br />
                                             Saturday: 8:00 AM - 12:30 PM
                                         </p>
@@ -103,7 +104,7 @@ export default function ContactPage() {
 
                         {/* Contact Form */}
                         <div className="p-8">
-                            <h2 className="text-2xl font-bold mb-6 text-white">Send us a Message</h2>
+                            <h2 className="text-2xl font-bold mb-6 text-foreground">Send us a Message</h2>
                             <ContactForm />
                         </div>
                     </div>

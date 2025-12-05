@@ -7,8 +7,19 @@ import { Target, Eye, Heart, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
-    title: "About Us | Super-BD Consulting Engineering",
-    description: "Learn about our history, mission, and state-of-the-art laboratory capabilities.",
+    title: "About Super-BD | Engineering Excellence & Innovation",
+    description: "Learn about Super-BD Consulting, Ethiopia's premier engineering firm. Our mission, vision, and commitment to quality in infrastructure and construction projects.",
+    openGraph: {
+        title: "About Super-BD | Engineering Excellence & Innovation",
+        description: "Learn about Super-BD Consulting, Ethiopia's premier engineering firm. Our mission, vision, and commitment to quality in infrastructure and construction projects.",
+        images: ["https://www.superbd-consulting.com/images/og-about.jpg"],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Super-BD | Engineering Excellence & Innovation",
+        description: "Learn about Super-BD Consulting, Ethiopia's premier engineering firm. Our mission, vision, and commitment to quality in infrastructure and construction projects.",
+        images: ["https://www.superbd-consulting.com/images/og-about.jpg"],
+    },
 };
 
 export default function AboutPage() {
@@ -28,7 +39,7 @@ export default function AboutPage() {
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
                         <div>
-                            <h2 className="text-3xl font-bold mb-6 text-white">Who We Are</h2>
+                            <h2 className="text-3xl font-bold mb-6 text-foreground">Who We Are</h2>
                             <div className="space-y-4 text-text-muted leading-relaxed">
                                 <p>
                                     <strong>Super-BD Consulting Engineering</strong> is a premier Geotechnical Engineering and Materials Testing Laboratory based in Hawassa, Ethiopia. With over 13 years of experience, we have established ourselves as a trusted partner in the construction and infrastructure sectors.
@@ -42,7 +53,7 @@ export default function AboutPage() {
                             </div>
                         </div>
                         <div className="bg-neutral border border-neutral-light/20 p-8 rounded-lg border-l-4 border-accent">
-                            <h3 className="text-xl font-bold mb-4 text-white">Key Strengths</h3>
+                            <h3 className="text-xl font-bold mb-4 text-foreground">Key Strengths</h3>
                             <ul className="space-y-3">
                                 {[
                                     "13+ Years of Industry Experience",
@@ -117,7 +128,7 @@ export default function AboutPage() {
             {/* Lab Capabilities */}
             <Section>
                 <Container>
-                    <h2 className="text-3xl font-bold mb-12 text-center text-white">Laboratory Capabilities</h2>
+                    <h2 className="text-3xl font-bold mb-12 text-center text-foreground">Laboratory Capabilities</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { title: "Soil Mechanics", desc: "Triaxial tests, consolidation, shear strength.", image: "/images/soil-mechanics-bg.jpg" },

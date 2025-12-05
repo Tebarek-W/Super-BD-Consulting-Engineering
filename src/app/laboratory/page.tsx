@@ -86,7 +86,7 @@ export default function LaboratoryPage() {
                                     <div className={`w-14 h-14 bg-gradient-to-br ${category.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:shadow-accent/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3`}>
                                         <category.icon size={28} className="text-white" />
                                     </div>
-                                    <h2 className="text-2xl font-bold text-white group-hover:text-accent transition-colors">
+                                    <h2 className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors">
                                         {category.category}
                                     </h2>
                                 </div>
@@ -95,7 +95,7 @@ export default function LaboratoryPage() {
                                 <div className="relative space-y-6">
                                     {category.items.map((item, idx) => (
                                         <div key={idx} className="group/item relative pl-4 border-l-2 border-neutral-light/20 hover:border-accent/50 transition-colors">
-                                            <h3 className="font-bold text-lg text-white group-hover/item:text-accent transition-colors mb-1">
+                                            <h3 className="font-bold text-lg text-foreground group-hover/item:text-accent transition-colors mb-1">
                                                 {item.name}
                                             </h3>
                                             <p className="text-text-muted text-sm leading-relaxed">{item.desc}</p>

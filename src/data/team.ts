@@ -1,9 +1,9 @@
 export const teamMembers = [
     {
-        name: "Daniel Hailemariam",
+        name: "Eng. Daniel Hailemariam",
         title: "General Manager & Pavement/Materials Engineer",
         degree: "M.Sc.",
-        bio: "With over 15 years of experience in civil engineering, Daniel leads Super-BD with a focus on quality assurance and technical excellence. He specializes in pavement design and advanced material testing.",
+        bio: "With over 13 years of experience in civil engineering, Daniel leads Super-BD with a focus on quality assurance and technical excellence. He specializes in pavement design and advanced material testing.",
         education: [
             "M.Sc. in Road & Transport Engineering",
             "B.Sc. in Civil Engineering"
@@ -27,72 +27,72 @@ export const teamMembers = [
         imagePosition: "center 15%"
     },
     {
-        name: "Dr. Abebe Worku",
-        title: "Senior Geotechnical Engineer",
-        degree: "Ph.D.",
-        bio: "Dr. Abebe brings 15+ years of expertise in soil mechanics and foundation engineering. He specializes in deep foundation design and slope stability analysis for large-scale infrastructure projects.",
-        education: [
-            "Ph.D. in Geotechnical Engineering",
-            "M.Sc. in Soil Mechanics",
-            "B.Sc. in Civil Engineering"
-        ],
-        certifications: [
-            "Professional Geotechnical Engineer",
-            "ISO 9001 Lead Auditor"
-        ],
-        memberships: [
-            "International Society for Soil Mechanics",
-            "Ethiopian Society of Civil Engineers"
-        ],
-        software: [
-            "PLAXIS 3D, GeoStudio",
-            "SAFE, ETABS",
-            "AutoCAD Civil 3D"
-        ],
-        role: "manager"
-    },
-    {
-        name: "Tigist Mekonnen",
-        title: "Materials Testing Manager",
-        degree: "M.Sc.",
-        bio: "Tigist oversees all laboratory operations with 8+ years of experience in materials testing and quality control. She ensures all tests comply with international standards and delivers accurate results.",
-        education: [
-            "M.Sc. in Construction Materials",
-            "B.Sc. in Civil Engineering"
-        ],
-        certifications: [
-            "ASTM Certified Technician",
-            "Quality Control Manager (ISO 9001)"
-        ],
-        memberships: [
-            "American Concrete Institute (ACI)"
-        ],
-        software: [
-            "LabView, TestWare",
-            "Microsoft Office Suite"
-        ],
-        role: "manager"
-    },
-    {
-        name: "Solomon Tadesse",
-        title: "Field Testing Supervisor",
+        name: "Eng. Birkti Mekonen",
+        title: "Senior Material Engineer",
         degree: "B.Sc.",
-        bio: "Solomon leads field testing operations with 10+ years of hands-on experience in site investigations and in-situ testing. His practical approach ensures accurate data collection and timely reporting.",
+        bio: "Senior Material Engineer based in Hawassa with extensive experience in construction material testing and quality assurance.",
         education: [
-            "B.Sc. in Civil Engineering",
-            "Diploma in Construction Technology"
+            "B.Sc. in Civil Engineering"
         ],
         certifications: [
-            "Field Testing Technician (FTT)",
-            "NDT Level II Certified"
+            "Professional Engineer"
         ],
         memberships: [
-            "Ethiopian Institute of Engineers"
+            "Ethiopian Association of Civil Engineers"
         ],
         software: [
-            "GPS/GIS Software",
-            "Field Data Collection Apps"
+            "AutoCAD",
+            "Microsoft Office"
         ],
-        role: "member"
+        phone: "0914043105",
+        city: "Hawassa",
+        role: "manager",
+        gender: "female",
+        image: null
+    },
+    {
+        name: "Eng. Shemeles Mergiya",
+        title: "Material Engineer",
+        degree: "B.Sc.",
+        bio: "Material Engineer specializing in soil and concrete testing for infrastructure projects in Hawassa.",
+        education: [
+            "B.Sc. in Civil Engineering"
+        ],
+        certifications: [
+            "Material Testing Certified"
+        ],
+        memberships: [
+            "Ethiopian Civil Engineers Association"
+        ],
+        software: [
+            "AutoCAD",
+            "Excel"
+        ],
+        phone: "0931606668",
+        city: "Hawassa",
+        role: "member",
+        gender: "male",
+        image: null
+    },
+    {
+        name: "Mrs. Etsubdenik Zerihun",
+        title: "Laboratory Technician",
+        degree: "Diploma",
+        bio: "Skilled Laboratory Technician responsible for conducting precise material tests and maintaining lab standards.",
+        education: [
+            "Diploma in Laboratory Technology"
+        ],
+        certifications: [
+            "Lab Technician Certificate"
+        ],
+        memberships: [],
+        software: [
+            "Lab Data Systems"
+        ],
+        phone: "0972584377",
+        city: "Hawassa",
+        role: "member",
+        gender: "female",
+        image: null
     }
 ];

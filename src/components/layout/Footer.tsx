@@ -17,7 +17,7 @@ export default function Footer() {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="font-bold text-lg leading-none text-white">Super-BD</span>
+                                <span className="font-bold text-lg leading-none text-foreground">Super-BD</span>
                                 <span className="text-xs font-medium text-text-muted">Consulting Engineering</span>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6 text-white border-b border-accent/30 pb-2 inline-block">Quick Links</h3>
+                        <h3 className="text-lg font-bold mb-6 text-foreground border-b border-accent/30 pb-2 inline-block">Quick Links</h3>
                         <ul className="space-y-3">
                             {[
                                 { name: "About Us", href: "/about" },
@@ -60,7 +60,7 @@ export default function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6 text-white border-b border-accent/30 pb-2 inline-block">Our Services</h3>
+                        <h3 className="text-lg font-bold mb-6 text-foreground border-b border-accent/30 pb-2 inline-block">Our Services</h3>
                         <ul className="space-y-3">
                             {[
                                 { name: "Soil Investigation", id: "soil-investigation" },
@@ -85,7 +85,7 @@ export default function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-bold mb-6 text-white border-b border-accent/30 pb-2 inline-block">Contact Us</h3>
+                        <h3 className="text-lg font-bold mb-6 text-foreground border-b border-accent/30 pb-2 inline-block">Contact Us</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-text-muted text-sm">
                                 <MapPin size={18} className="text-accent mt-0.5 shrink-0" />
@@ -112,6 +112,9 @@ export default function Footer() {
                 <div className="border-t border-neutral-light/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-text-muted text-sm">
                         &copy; {new Date().getFullYear()} Super-BD Consulting Engineering. All rights reserved.
+                    </p>
+                    <p className="text-text-muted text-sm">
+                        Empowered by <a href="https://www.glymetechsolutions.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-bright transition-colors font-medium">GLYME TECH Solutions</a>
                     </p>
                     <div className="flex gap-6 text-sm text-text-muted">
                         <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>

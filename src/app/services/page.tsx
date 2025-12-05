@@ -10,8 +10,19 @@ import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {
-    title: "Our Services | Super-BD Consulting Engineering",
-    description: "Explore our comprehensive range of geotechnical and material testing services.",
+    title: "Engineering Services | Geotechnical, Structural & Testing",
+    description: "Comprehensive engineering services: Soil investigation, concrete testing, asphalt testing, structural design, and project management in Ethiopia.",
+    openGraph: {
+        title: "Engineering Services | Geotechnical, Structural & Testing",
+        description: "Comprehensive engineering services: Soil investigation, concrete testing, asphalt testing, structural design, and project management in Ethiopia.",
+        images: ["https://www.superbd-consulting.com/images/og-services.jpg"],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Engineering Services | Geotechnical, Structural & Testing",
+        description: "Comprehensive engineering services: Soil investigation, concrete testing, asphalt testing, structural design, and project management in Ethiopia.",
+        images: ["https://www.superbd-consulting.com/images/og-services.jpg"],
+    },
 };
 
 export default function ServicesPage() {
@@ -31,7 +42,7 @@ export default function ServicesPage() {
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.map((service) => (
-                            <Card key={service.id} id={service.id} className="group relative flex flex-col overflow-hidden border-0 shadow-lg h-[480px] scroll-mt-24">
+                            <Card key={service.id} id={service.id} className="group relative flex flex-col overflow-hidden border-0 shadow-lg h-[350px] scroll-mt-24">
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/50 z-10" />
@@ -63,14 +74,7 @@ export default function ServicesPage() {
                                             ))}
                                         </ul>
                                     </CardContent>
-                                    <CardFooter className="pt-3">
-                                        <Button variant="outline" className="w-full gap-2 group border-white/20 text-white hover:bg-white hover:text-primary hover:border-white transition-colors" asChild>
-                                            <Link href={`/services/${service.slug}`}>
-                                                View Details
-                                                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                                            </Link>
-                                        </Button>
-                                    </CardFooter>
+
                                 </div>
                             </Card>
                         ))}

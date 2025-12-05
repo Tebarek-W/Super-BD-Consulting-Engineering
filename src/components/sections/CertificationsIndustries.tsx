@@ -16,7 +16,7 @@ export default function CertificationsIndustries() {
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     {/* Certifications */}
                     <div className="flex-1">
-                        <h2 className="text-3xl font-bold mb-6 text-white">Certified Excellence</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-foreground">Certified Excellence</h2>
                         <p className="text-text-muted mb-8 leading-relaxed">
                             We adhere to the highest international standards to ensure accuracy and reliability in every test we conduct. Our laboratory is equipped with state-of-the-art technology and staffed by certified professionals.
                         </p>
@@ -42,7 +42,7 @@ export default function CertificationsIndustries() {
                             {industries.map((industry, index) => (
                                 <div key={index} className="bg-neutral border border-neutral-light/20 p-6 rounded-lg flex flex-col items-center justify-center text-center hover:bg-accent/10 hover:border-accent transition-all duration-300 group">
                                     <industry.icon size={32} className="mb-3 text-accent transition-colors" />
-                                    <span className="font-bold text-white group-hover:text-accent transition-colors">{industry.name}</span>
+                                    <span className="font-bold text-foreground group-hover:text-accent transition-colors">{industry.name}</span>
                                 </div>
                             ))}
                         </div>

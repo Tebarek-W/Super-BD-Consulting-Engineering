@@ -62,7 +62,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-white"
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-foreground"
                     >
                         Engineering <span className="text-accent">Excellence</span>
                     </motion.h1>

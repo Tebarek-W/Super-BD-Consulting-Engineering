@@ -8,19 +8,19 @@ const services = [
         title: "Soil Investigation",
         description: "Comprehensive soil analysis for foundation design and stability assessments.",
         icon: Layers,
-        image: "/images/soil-investigation.jpg"
+        image: "/images/Soil_Investigation.png"
     },
     {
         title: "Concrete Testing",
         description: "Quality control testing for concrete mixes, strength, and durability.",
         icon: Beaker,
-        image: "/images/lab-photo.jpg"
+        image: "/images/concrete-testing.jpg"
     },
     {
         title: "Geotechnical Investigation",
         description: "In-depth subsurface exploration for bridges, dams, and buildings.",
         icon: Activity,
-        image: "/images/hero-dam.png"
+        image: "/images/geotechnical-investigation.jpg"
     },
     {
         title: "Material Testing",
@@ -71,7 +71,7 @@ export default function ServicesSummary() {
             <Container>
                 {/* Services Section */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Expertise</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Our Expertise</h2>
                     <p className="text-text-muted">
                         We deliver accurate, reliable, and timely engineering solutions tailored to the unique needs of the construction and infrastructure sectors.
                     </p>
@@ -114,7 +114,7 @@ export default function ServicesSummary() {
                 {/* Industries We Serve Section */}
                 <div className="pt-12 border-t border-neutral-light/10">
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Industries We Serve</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Industries We Serve</h2>
                         <p className="text-text-muted">
                             Providing specialized engineering solutions across diverse sectors
                         </p>
@@ -135,7 +135,7 @@ export default function ServicesSummary() {
                                 </div>
 
                                 {/* Title */}
-                                <h3 className="relative text-center font-bold text-white group-hover:text-accent transition-colors text-lg">
+                                <h3 className="relative text-center font-bold text-foreground group-hover:text-accent transition-colors text-lg">
                                     {industry.title}
                                 </h3>
 

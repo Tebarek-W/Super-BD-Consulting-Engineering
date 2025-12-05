@@ -73,15 +73,7 @@ export default function ServiceDetailPage({ params }: ServicePageProps) {
 
                         {/* Sidebar */}
                         <div className="space-y-8">
-                            <div className="bg-neutral p-6 rounded-lg border border-gray-100">
-                                <h3 className="text-lg font-bold mb-4 text-primary">Need this service?</h3>
-                                <p className="text-gray-600 mb-6 text-sm">
-                                    Contact us today to discuss your project requirements and get a quote.
-                                </p>
-                                <Button className="w-full" asChild>
-                                    <Link href="/contact">Get a Quote</Link>
-                                </Button>
-                            </div>
+
 
                             <div className="bg-primary text-white p-6 rounded-lg">
                                 <h3 className="text-lg font-bold mb-4">Why Choose Us?</h3>
