@@ -21,7 +21,6 @@ export default function ContactPage() {
                 title="Contact Us"
                 description="We are here to answer your questions and discuss your project needs."
                 image="/images/contact-hero-modern.jpg"
-                overlayClassName="bg-white/80 dark:bg-black/40"
             />
 
             <Section>
