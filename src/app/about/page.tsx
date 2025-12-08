@@ -144,7 +144,7 @@ export default function AboutPage() {
                                 {(item as any).image && (
                                     <>
                                         <div className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style={{ backgroundImage: `url('${(item as any).image}')` }} />
-                                        <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-colors" />
+                                        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
                                     </>
                                 )}
                                 <div className="relative z-10">

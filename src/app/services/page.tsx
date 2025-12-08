@@ -45,7 +45,7 @@ export default function ServicesPage() {
                             <Card key={service.id} id={service.id} className="group relative flex flex-col overflow-hidden border-0 shadow-lg h-[350px] scroll-mt-24">
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/50 z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 z-10" />
                                     <img
                                         src={(service as any).image}
                                         alt={service.title}
