@@ -14,7 +14,7 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight, overlayClassName }: PageHeroProps) {
-    const heightClass = customHeight || "h-[70vh] min-h-[600px]";
+    const heightClass = customHeight || "h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[500px] sm:min-h-[600px]";
 
     return (
         <section className={`relative ${heightClass} flex items-center justify-center overflow-hidden bg-background`}>
@@ -44,7 +44,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground dark:text-white drop-shadow-lg"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground dark:text-white drop-shadow-lg"
                     >
                         {title}
                     </motion.h1>
@@ -52,7 +52,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
-                        className="text-xl md:text-2xl text-text-muted dark:text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+                        className="text-lg sm:text-xl md:text-2xl text-text-muted dark:text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
                     >
                         {description}
                     </motion.p>

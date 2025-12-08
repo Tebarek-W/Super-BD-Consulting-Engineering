@@ -37,7 +37,7 @@ export default function AboutPage() {
             {/* Company Background */}
             <Section>
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
                         <div>
                             <h2 className="text-3xl font-bold mb-6 text-foreground">Who We Are</h2>
                             <div className="space-y-4 text-text-muted leading-relaxed">
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <Section>
                 <Container>
                     <h2 className="text-3xl font-bold mb-12 text-center text-foreground">Laboratory Capabilities</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { title: "Soil Mechanics", desc: "Triaxial tests, consolidation, shear strength.", image: "/images/soil-mechanics-bg.jpg" },
                             { title: "Concrete Technology", desc: "Compressive strength, mix design, durability.", image: "/images/concrete-technology-bg.jpg" },

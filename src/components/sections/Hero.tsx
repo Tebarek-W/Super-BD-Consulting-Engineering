@@ -62,7 +62,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3, duration: 0.8 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-foreground"
+                        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-foreground"
                     >
                         Engineering <span className="text-accent">Excellence</span>
                     </motion.h1>
@@ -72,7 +72,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
-                        className="text-xl md:text-2xl text-text-muted mb-12 max-w-3xl mx-auto leading-relaxed font-light"
+                        className="text-lg sm:text-xl md:text-2xl text-text-muted mb-12 max-w-3xl mx-auto leading-relaxed font-light"
                     >
                         Precision geotechnical investigations, advanced material testing,
                         and comprehensive engineering consultancy for Ethiopia's infrastructure future.
@@ -108,7 +108,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.9, duration: 0.8 }}
-                        className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
+                        className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-3xl mx-auto"
                     >
                         <div className="text-center">
                             <div className="text-4xl font-bold text-accent mb-2">500+</div>
