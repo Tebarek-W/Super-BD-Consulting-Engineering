@@ -10,10 +10,9 @@ interface PageHeroProps {
     imagePosition?: string;
     topOffset?: boolean;
     customHeight?: string;
-    overlayClassName?: string;
 }
 
-export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight, overlayClassName }: PageHeroProps) {
+export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight }: PageHeroProps) {
     const heightClass = customHeight || "h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[500px] sm:min-h-[600px]";
 
     return (
@@ -27,8 +26,9 @@ export default function PageHero({ title, description, image, imagePosition = "c
                 }}
             />
 
-            {/* Dark Overlay */}
-            <div className={`absolute inset-0 ${overlayClassName || "bg-white/90 dark:bg-black/60"}`} />
+            {/* Dark Gradient Overlay for readability - matching home page style */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/40 via-background/30 to-background/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />
 
             {/* Gradient Fade */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
