@@ -1,18 +1,5 @@
 @import "tailwindcss";
 
-/* CSS Reset for better cross-device consistency */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
 :root {
   /* Dark Engineering Navy Theme with Green Accents */
   --background: #10253F;
