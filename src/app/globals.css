@@ -1,31 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* Light Mode Theme */
-  --background: #FAFAFA;
-  --background-dark: #F3F4F6;
-  --foreground: #10253F;
-
-  /* Primary Colors */
-  --primary: #FFFFFF;
-  --primary-light: #F3F4F6;
-  --secondary: #3B82F6;
-
-  /* Accents */
-  --accent: #1E40AF;
-  --accent-bright: #3B82F6;
-  --accent-hover: #1D4ED8;
-  --accent-subtle: #DBEAFE;
-
-  /* Neutral & Supporting */
-  --neutral: #F9FAFB;
-  --neutral-light: #E5E7EB;
-  --text-dark: #111827;
-  --text-muted: #6B7280;
-  --border-subtle: #E5E7EB;
-}
-
-.dark {
   /* Dark Engineering Navy Theme with Green Accents */
   --background: #10253F;
   /* Dark Engineering Navy - Primary */

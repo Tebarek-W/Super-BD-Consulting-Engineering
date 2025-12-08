@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
+
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -87,12 +87,10 @@ export default function Navbar() {
                                 </Link>
                             );
                         })}
-                        <ThemeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="md:hidden flex items-center gap-4">
-                        <ThemeToggle />
                         <button
                             className="text-accent hover:text-accent-bright transition-colors"
                             onClick={() => setIsOpen(!isOpen)}
