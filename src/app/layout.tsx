@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   },
   description: "Geotechnical Engineering & Materials Testing Laboratory in Hawassa, Ethiopia.",
   keywords: ["Civil Engineering Ethiopia", "Geotechnical Investigation", "Structural Design", "Construction Supervision", "Material Testing Laboratory", "Project Management", "Super-BD Consulting"],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
