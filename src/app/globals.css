@@ -40,6 +40,47 @@
   /* Subtle borders */
 }
 
+/* Light Theme - Modern Professional White */
+.light {
+  /* Light Backgrounds - Softer off-white */
+  --background: #F9FAFB;
+  /* Soft off-white primary background */
+  --background-dark: #F1F5F9;
+  /* Light gray for sections */
+  --foreground: #0F172A;
+  /* Dark slate for text */
+
+  /* Primary Colors - Professional Blue Palette */
+  --primary: #1E3A8A;
+  /* Deep blue */
+  --primary-light: #3B82F6;
+  /* Bright blue for hover */
+  --secondary: #0EA5E9;
+  /* Sky blue for contrast */
+
+  /* Accent Colors - Vibrant and Clean */
+  --accent: #2563EB;
+  /* Royal blue - Primary accent */
+  --accent-bright: #3B82F6;
+  /* Light blue - Highlights */
+  --accent-hover: #1D4ED8;
+  /* Deep blue - Hover states */
+  --accent-subtle: #DBEAFE;
+  /* Very light blue for subtle backgrounds */
+
+  /* Neutral & Supporting Colors */
+  --neutral: #F1F5F9;
+  /* Light gray for cards/sections */
+  --neutral-light: #E2E8F0;
+  /* Lighter gray for borders */
+  --text-dark: #0F172A;
+  /* Strong dark text on light backgrounds */
+  --text-muted: #475569;
+  /* Darker muted text for better readability */
+  --border-subtle: #CBD5E1;
+  /* Subtle borders */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-background-dark: var(--background-dark);

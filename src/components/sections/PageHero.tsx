@@ -26,9 +26,9 @@ export default function PageHero({ title, description, image, imagePosition = "c
                 }}
             />
 
-            {/* Dark Gradient Overlay for readability - matching home page style */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/40 via-background/30 to-background/60" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent" />
+            {/* Dark Gradient Overlay for readability - lightened for brighter images */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background/20 to-background/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/20 to-transparent" />
 
             {/* Gradient Fade */}
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
@@ -44,7 +44,8 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground dark:text-white drop-shadow-lg"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white dark:text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
+                        style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}
                     >
                         {title}
                     </motion.h1>
@@ -52,7 +53,8 @@ export default function PageHero({ title, description, image, imagePosition = "c
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
-                        className="text-lg sm:text-xl md:text-2xl text-text-muted dark:text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+                        className="text-lg sm:text-xl md:text-2xl font-medium text-gray-50 dark:text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                        style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5)' }}
                     >
                         {description}
                     </motion.p>

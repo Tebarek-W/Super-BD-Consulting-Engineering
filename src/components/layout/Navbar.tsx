@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 
 const navLinks = [
@@ -67,7 +68,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-6">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
                             return (
@@ -87,10 +88,12 @@ export default function Navbar() {
                                 </Link>
                             );
                         })}
+                        <ThemeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center gap-4">
+                    <div className="md:hidden flex items-center gap-3">
+                        <ThemeToggle />
                         <button
                             className="text-accent hover:text-accent-bright transition-colors"
                             onClick={() => setIsOpen(!isOpen)}

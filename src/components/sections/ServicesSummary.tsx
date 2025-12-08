@@ -52,7 +52,7 @@ export default function ServicesSummary() {
                             >
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/50 z-10" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 z-10" />
                                     <img
                                         src={service.cardImage}
                                         alt={service.title}
