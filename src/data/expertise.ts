@@ -33,7 +33,10 @@ export const expertiseAreas: ExpertiseArea[] = [
         gallery: [
             "/images/expertise-soil-1.jpg",
             "/images/expertise-soil-2.jpg",
-            "/images/expertise-soil-3.jpg"
+            "/images/expertise-soil-3.jpg",
+            "/images/expertise-soil-4.jpg",
+            "/images/expertise-soil-5.jpg",
+            "/images/expertise-soil-6.jpg"
         ],
         process: [
             "Site reconnaissance and planning",
