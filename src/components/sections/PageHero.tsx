@@ -13,48 +13,46 @@ interface PageHeroProps {
 }
 
 export default function PageHero({ title, description, image, imagePosition = "center", topOffset = true, customHeight }: PageHeroProps) {
-    const heightClass = customHeight || "h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[500px] sm:min-h-[600px]";
+    const heightClass = customHeight || "h-[75vh] sm:h-[80vh] md:h-[85vh] lg:h-[90vh] min-h-[550px] sm:min-h-[600px] md:min-h-[650px]";
 
     return (
         <section className={`relative ${heightClass} flex items-center justify-center overflow-hidden bg-background`}>
-            {/* Background Image */}
+            {/* Background Image - Full coverage with smooth scaling */}
             <div
-                className={`absolute inset-x-0 bottom-0 bg-cover ${topOffset ? 'top-28' : 'top-0'}`}
+                className={`absolute inset-x-0 bottom-0 bg-cover bg-no-repeat ${topOffset ? 'top-20 sm:top-24 md:top-28' : 'top-0'}`}
                 style={{
                     backgroundImage: `url('${image}')`,
                     backgroundPosition: imagePosition,
                 }}
             />
 
-            {/* Dark Gradient Overlay for readability - lightened for brighter images */}
-            <div className="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background/20 to-background/50" />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/20 to-transparent" />
+            {/* Overlay - Gradient for image clarity with text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/25 to-background/60 dark:from-background-dark/40 dark:via-background-dark/30 dark:to-background-dark/70" />
 
-            {/* Gradient Fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
+            {/* Bottom Gradient Fade - Taller for smoother transition */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent" />
 
-            <Container className="relative z-10 text-center">
+            {/* Content Container with generous padding */}
+            <Container className="relative z-10 text-center px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20">
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 25 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="max-w-4xl mx-auto"
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                    className="max-w-4xl mx-auto space-y-6 sm:space-y-8"
                 >
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.8 }}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white dark:text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
-                        style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}
+                        transition={{ delay: 0.15, duration: 0.7, ease: "easeOut" }}
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight drop-shadow-md"
                     >
                         {title}
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.4, duration: 0.8 }}
-                        className="text-lg sm:text-xl md:text-2xl font-medium text-gray-50 dark:text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-                        style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.5)' }}
+                        transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
+                        className="text-lg sm:text-xl md:text-2xl text-foreground font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-md"
                     >
                         {description}
                     </motion.p>

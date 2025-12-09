@@ -115,7 +115,7 @@ export default function Hero() {
                             <div className="text-sm text-text-muted uppercase tracking-wide">Projects Completed</div>
                         </div>
                         <div className="text-center border-x border-neutral-light">
-                            <div className="text-4xl font-bold text-accent mb-2">15+</div>
+                            <div className="text-4xl font-bold text-accent mb-2">13+</div>
                             <div className="text-sm text-text-muted uppercase tracking-wide">Years Experience</div>
                         </div>
                         <div className="text-center">

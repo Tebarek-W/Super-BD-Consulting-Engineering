@@ -137,3 +137,31 @@ body {
   background: var(--accent);
   color: var(--background);
 }
+
+/* Why Choose Us Section - Light Theme Styles */
+.light .why-choose-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 50%, #ffffff 100%);
+}
+
+.light .why-choose-card {
+  background: #ffffff;
+  border: 1px solid var(--accent-subtle);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+}
+
+.light .why-choose-card:hover {
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+  border-color: var(--accent);
+}
+
+.light .why-choose-title {
+  color: var(--primary);
+}
+
+.light .why-choose-description {
+  color: var(--text-muted);
+}
+
+.light .why-choose-icon-wrapper {
+  background: var(--accent-subtle);
+}

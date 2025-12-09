@@ -48,7 +48,7 @@ export default function ServicesSummary() {
                             className="block"
                         >
                             <Card
-                                className="relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group hover:-translate-y-2 cursor-pointer"
+                                className="relative overflow-hidden border-0 shadow-lg hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500 group hover:-translate-y-2 cursor-pointer h-[320px]"
                             >
                                 {/* Background Image */}
                                 <div className="absolute inset-0 z-0">

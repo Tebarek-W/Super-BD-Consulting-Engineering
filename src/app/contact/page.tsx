@@ -18,9 +18,9 @@ export default function ContactPage() {
 
             {/* Page Header */}
             <PageHero
-                title="Contact Us"
-                description="We are here to answer your questions and discuss your project needs."
-                image="/images/contact-hero-modern.jpg"
+                title=""
+                description=""
+                image="/images/contact-modern.jpg"
             />
 
             <Section>

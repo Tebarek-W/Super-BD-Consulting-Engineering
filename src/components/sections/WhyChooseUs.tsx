@@ -27,23 +27,23 @@ const reasons = [
 
 export default function WhyChooseUs() {
     return (
-        <Section className="bg-primary text-foreground">
+        <Section className="why-choose-section bg-primary text-foreground">
             <Container>
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Super-BD?</h2>
-                    <p className="text-text-muted">
+                    <h2 className="why-choose-title text-3xl md:text-4xl font-bold mb-4">Why Choose Super-BD?</h2>
+                    <p className="why-choose-description text-text-muted">
                         We combine technical expertise with a commitment to quality, ensuring your project rests on solid ground.
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {reasons.map((reason, index) => (
-                        <div key={index} className="text-center p-6 rounded-lg bg-neutral/50 hover:bg-neutral border border-neutral-light/20 hover:border-accent transition-all">
-                            <div className="w-16 h-16 mx-auto bg-accent/20 rounded-full flex items-center justify-center mb-6 text-accent">
+                        <div key={index} className="why-choose-card text-center p-6 rounded-lg bg-neutral/50 hover:bg-neutral border border-neutral-light/20 hover:border-accent transition-all">
+                            <div className="why-choose-icon-wrapper w-16 h-16 mx-auto bg-accent/20 rounded-full flex items-center justify-center mb-6 text-accent">
                                 <reason.icon size={32} />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-                            <p className="text-text-muted text-sm leading-relaxed">
+                            <h3 className="why-choose-title text-xl font-bold mb-3">{reason.title}</h3>
+                            <p className="why-choose-description text-text-muted text-sm leading-relaxed">
                                 {reason.description}
                             </p>
                         </div>
