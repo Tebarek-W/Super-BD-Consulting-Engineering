@@ -1,12 +1,9 @@
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { services } from "@/data/services";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import PageHero from "@/components/sections/PageHero";
 
 export const metadata = {

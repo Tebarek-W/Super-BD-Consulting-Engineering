@@ -16,7 +16,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
     const heightClass = customHeight || "h-[75vh] sm:h-[80vh] md:h-[85vh] lg:h-[90vh] min-h-[550px] sm:min-h-[600px] md:min-h-[650px]";
 
     return (
-        <section className={`relative ${heightClass} flex items-center justify-center overflow-hidden bg-background`}>
+        <section className={`page-hero relative ${heightClass} flex items-center justify-center overflow-hidden bg-background`}>
             {/* Background Image - Full coverage with smooth scaling */}
             <div
                 className={`absolute inset-x-0 bottom-0 bg-cover bg-no-repeat ${topOffset ? 'top-20 sm:top-24 md:top-28' : 'top-0'}`}
@@ -30,7 +30,7 @@ export default function PageHero({ title, description, image, imagePosition = "c
             <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/25 to-background/60 dark:from-background-dark/40 dark:via-background-dark/30 dark:to-background-dark/70" />
 
             {/* Bottom Gradient Fade - Taller for smoother transition */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent" />
+            <div className="page-hero-bottom-gradient absolute bottom-0 left-0 right-0 h-32 sm:h-40 md:h-48 bg-gradient-to-t from-background via-background/80 to-transparent" />
 
             {/* Content Container with generous padding */}
             <Container className="relative z-10 text-center px-6 sm:px-8 md:px-12 py-12 sm:py-16 md:py-20">
